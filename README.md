@@ -73,61 +73,22 @@ Client-server chat applications are versatile tools that facilitate real-time co
 
 Client-server chat applications are foundational to real-time communication over networks. They incorporate principles of socket programming, communication protocols, and security mechanisms to provide a seamless user experience. Understanding the basics of client-server chat applications is essential for developers involved in networked application development, as they form the backbone of various collaborative communication systems. As technology evolves, chat applications continue to adapt, incorporating new features and technologies to enhance user interaction and connectivity.
 
-## Program:
-client 
-```
+## Program
+<img width="1148" height="863" alt="Screenshot 2025-08-25 171308" src="https://github.com/user-attachments/assets/96d3675b-2c8e-45d1-b6c8-8183ad61f055" />
 
-import socket
+<img width="1391" height="717" alt="Screenshot 2025-08-25 171327" src="https://github.com/user-attachments/assets/6a1a98d2-06b5-4c15-81e6-06e4e41aefce" />
 
-client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-client.connect(("127.0.0.1", 65432))
-
-done=False
-
-while not done:
-    client.send(input("Message ").encode('utf-8'))
-    msg = client.recv(1024).decode('utf-8')
-
-    if msg == 'quit':
-        done=True
-    else:
-        print(msg)
+## Output
+<img width="1164" height="699" alt="Screenshot 2025-08-25 171349" src="https://github.com/user-attachments/assets/45ef8a4c-a742-4d8c-94b4-04ac6ed39443" />
 
 
 
-client.close()
-client
-```
-Server
-```
-import socket
-from base64 import decode
-from operator import truediv
-
-server =socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(("127.0.0.1", 65432))
-server.listen()
-client,addr=server.accept()
-
-done = False
-
-while not done:
-    msg = client.recv(1024).decode('utf-8')
-
-    if msg == 'quit':
-        done = True
-    else:
-        print(msg)
-
-    client.send(input("Message ").encode('utf-8'))
 
 
-client.close()
-server.close()
-```
-## Output:
-![alt text](<Screenshot 2025-09-08 184405.png>)
+
+## Result:
+
+Thus the study on Client Server Chat Applications has been performed
 
 
 ## Result:
